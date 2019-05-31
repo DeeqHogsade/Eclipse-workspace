@@ -1,0 +1,7 @@
+package com.qa.rest;
+
+public interface Relation {
+	
+	public String message();
+
+}

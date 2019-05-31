@@ -1,0 +1,19 @@
+package com.qa.rest;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+@Path("/")
+public class AccountEndPoints {
+
+	@GET
+	@Path("/account")
+	@Produces(MediaType.TEXT_PLAIN)
+	public Response getText() {
+		String text = "Hello world";
+		return Response.noContent().build();
+	}
+}

@@ -1,0 +1,9 @@
+package com.qa.calculatorTest;
+
+public class CalculatorTest {
+
+	public CalculatorTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

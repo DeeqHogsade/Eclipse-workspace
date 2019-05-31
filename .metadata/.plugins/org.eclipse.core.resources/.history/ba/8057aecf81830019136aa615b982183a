@@ -1,0 +1,9 @@
+package com.qa.rest;
+
+public class JaxRsConfiguration {
+
+	public JaxRsConfiguration() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

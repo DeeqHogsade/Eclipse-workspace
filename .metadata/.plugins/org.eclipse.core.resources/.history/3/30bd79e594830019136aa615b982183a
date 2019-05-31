@@ -1,0 +1,22 @@
+package com.qa.repository;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceUnit;
+
+public class AccountRepoDB implements AccountRepo{
+
+	@PersistenceUnit(unitName = "myPU")
+	private EntityManagerFactory emf; 
+
+	public Account createAccount(Account account){
+		EntityManager manager = emf.createEntityManager();
+		EntityTransaction et = manager.getTransaction();
+		et.begin();
+		manager.persist(account);
+		et.commit();
+		manager.close();
+		return account;
+	}
+}

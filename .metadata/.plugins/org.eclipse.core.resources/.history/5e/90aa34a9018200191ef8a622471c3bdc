@@ -1,0 +1,9 @@
+package com.qa.calculator;
+
+public class Scanner {
+
+	public Integer input() {
+		return input;
+	}
+
+}

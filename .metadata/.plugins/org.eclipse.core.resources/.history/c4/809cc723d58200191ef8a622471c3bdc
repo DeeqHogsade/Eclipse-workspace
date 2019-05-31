@@ -1,0 +1,124 @@
+package com.qa.accountTest;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.qa.app.Account;
+import com.qa.app.AccountRepositoryDB;
+import com.qa.app.AccountRepositoryMap;
+import com.qa.app.Task;
+
+public class AccountTest {
+	Account account;
+	Account a;
+	Account b;
+	Account accountBack;
+	Account update;
+	Account delete;
+	Account create;
+	Account accRetrieve;
+
+
+	@Before
+	public void startTest() {
+		account = new Account(0, null, null, 0);
+		a = new Account(0, "Deeg", null, 0);
+		b = new Account();
+		accountBack = new Account();
+		accRetrieve = new Account(0, "Deeg", null, 0);
+	}
+
+	@Test
+	public void createAccountNumber() {
+		account.setAccountNumber(3);
+		int accountNumber = account.getAccountNumber();
+		assertEquals("Wrong account number", 3, accountNumber);
+	}
+
+	@Test
+	public void createId() {
+		account.setId(0);
+		int id = account.getId();
+		assertEquals("Wrong id", 0, id);
+
+	}
+
+	@Test
+	public void createFirstName() {
+		account.setFirstName("Deeg");
+		String firstName = account.getFirstName();
+		assertEquals("Wrong first name", "Deeg", firstName);
+
+	}
+
+	@Test
+	public void createLastName() {
+		account.setLastName("Hogsade");
+		String lastName = account.getLastName();
+		assertEquals("Wrong last name", "Hogsade", lastName);
+
+	}
+	
+	@Test
+	public void accountRepositoryMapTest() {
+		AccountRepositoryMap arm = new AccountRepositoryMap();
+		int id = 2;
+		a.setId(id);
+		arm.add(a);
+		Account retrieved = arm.retrieve(id);
+		assertEquals("Wrong account", "Deeg", retrieved.getFirstName());
+	}
+	
+	@Test
+	public void accountRepositoryDBTest() {
+		AccountRepositoryDB db = new AccountRepositoryDB();
+		db.add(b);
+		int id = b.getId();
+		accountBack = db.retrieve(id);
+		assertEquals(b, accountBack);
+	}
+	
+	@Test
+	public void DBUpdate() {
+		update = new Account();
+		AccountRepositoryDB db = new AccountRepositoryDB();
+		account.setFirstName("Adrian");
+		db.add(account);
+		int id = account.getId();
+		db.updateFirstName(id, "Danny");
+		String firstName = db.retrieve(id).getFirstName();
+		assertEquals("Wrong name updated", "Danny", firstName);
+	}
+	
+	@Test
+	public void DBDelete() {
+		AccountRepositoryDB db = new AccountRepositoryDB();
+		db.add(account);
+		int id = account.getId();
+		db.remove(id);
+		assertNull("Account not deleted", db.retrieve(id));
+	}
+	
+	@Test
+	public void createWithTask() {
+	AccountRepositoryDB arDB = new AccountRepositoryDB();
+	create = new Account();
+	create.setFirstName("Hugo");
+	Task t = new Task();
+	t.setToDo("Dance");
+	Task t2 = new Task();
+	t2.setToDo("Walk the dog");
+	create.getTasks().add(t);
+	create.getTasks().add(t2);
+	arDB.createWithTasks(create);
+	
+	}
+	
+	@Test
+	public void retrieveByFirstName() {
+		AccountRepositoryDB arDB = new AccountRepositoryDB();
+		arDB.retrieveByName(accRetrieve.getFirstName("Hugo"));
+	}
+}

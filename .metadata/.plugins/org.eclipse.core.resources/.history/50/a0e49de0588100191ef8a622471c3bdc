@@ -1,0 +1,9 @@
+package com.qa.accountTest;
+
+public class AccountTest {
+
+	public AccountTest() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

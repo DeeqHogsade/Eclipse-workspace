@@ -1,0 +1,9 @@
+package com.qa.repository;
+
+public class Friend {
+
+	public Friend() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

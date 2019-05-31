@@ -1,0 +1,7 @@
+com\qa\repository\Relation.class
+com\qa\repository\AccountRepo.class
+com\qa\rest\JaxRsConfiguration.class
+com\qa\repository\Friend.class
+com\qa\rest\AccountEndPoints.class
+com\qa\model\Account.class
+com\qa\repository\AccountRepoDB.class

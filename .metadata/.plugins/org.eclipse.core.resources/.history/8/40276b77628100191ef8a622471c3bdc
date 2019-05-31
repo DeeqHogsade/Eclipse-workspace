@@ -1,0 +1,9 @@
+package com.qa.app;
+
+public class AccountRepositoryMap {
+
+	public AccountRepositoryMap() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.qa.accountApp.AccountRepositorymap&apos; to &apos;AccountRepositoryMap&apos;&#x0D;&#x0A;- Original project: &apos;buddywork&apos;&#x0D;&#x0A;- Original element: &apos;com.qa.accountApp.AccountRepositorymap&apos;&#x0D;&#x0A;- Renamed element: &apos;com.qa.accountApp.AccountRepositoryMap&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AccountRepositorymap&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.qa.accountApp{AccountRepositorymap.java[AccountRepositorymap" matchStrategy="1" name="AccountRepositoryMap" qualified="false" references="true" similarDeclarations="false" stamp="1559121102404" textual="false" version="1.0"/>
+</session>

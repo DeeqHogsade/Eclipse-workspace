@@ -1,0 +1,9 @@
+package com.qa.calculator;
+
+public class UserInput {
+
+	public Integer input() {
+		return input;
+	}
+
+}

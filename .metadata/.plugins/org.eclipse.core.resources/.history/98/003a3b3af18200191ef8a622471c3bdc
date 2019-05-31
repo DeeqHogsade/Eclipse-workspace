@@ -1,0 +1,8 @@
+package com.qa;
+
+public class Enemy implements Message{
+
+	public String message() {
+		return "I hate you";
+	}
+}

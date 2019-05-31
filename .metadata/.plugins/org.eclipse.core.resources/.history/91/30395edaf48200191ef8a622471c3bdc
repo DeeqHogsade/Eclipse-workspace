@@ -1,0 +1,9 @@
+package com.qa;
+
+@Happy
+public class Friend implements Message{
+	
+	public String message() {
+		return "Hello Friend";
+	}
+}

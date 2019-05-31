@@ -1,0 +1,9 @@
+package com.qa.app;
+
+public class AccountRepositoryDB {
+
+	public AccountRepositoryDB() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

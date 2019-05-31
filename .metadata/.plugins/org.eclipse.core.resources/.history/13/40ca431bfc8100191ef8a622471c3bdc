@@ -1,0 +1,12 @@
+package com.qa.calculatorTest;
+
+public class CalculatorTest {
+	@Before
+	Calculator calc;
+	
+	@Test
+	public void inputNumbers() {
+		calc.input();
+		assertEquals("")
+	}
+}

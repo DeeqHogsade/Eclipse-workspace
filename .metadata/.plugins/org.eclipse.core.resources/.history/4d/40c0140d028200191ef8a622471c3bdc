@@ -1,0 +1,14 @@
+package com.qa.calculator;
+
+import java.util.Scanner;
+
+public class UserInput {
+
+	public Integer input() {
+		Scanner scan = new Scanner(System.in);
+		Integer input = Integer.parseInt(scan.nextLine());
+		scan.close();
+		return input;
+	}
+
+}

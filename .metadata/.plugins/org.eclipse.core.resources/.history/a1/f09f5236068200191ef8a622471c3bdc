@@ -1,0 +1,15 @@
+package com.qa.calculator;
+
+public class Calculator {
+
+	UserInput input = new UserInput();
+	UserInput input2 = new UserInput();
+	int user = input.input();
+	int user2 = input.input();
+	
+	public int sub(int num, int num2) {
+		return num - num2;
+	}
+	
+
+}

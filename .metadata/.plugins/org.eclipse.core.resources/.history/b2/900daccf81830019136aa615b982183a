@@ -1,0 +1,9 @@
+package com.qa.rest;
+
+public class AccountEndPoints {
+
+	public AccountEndPoints() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
